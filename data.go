@@ -30,8 +30,25 @@ type (
 		Message string `json:"message"`
 		Status  string `json:"status"`
 		Data    struct {
-			Charge float64 `json:"charge"`
-		}
+			AccountName         string      `json:"account_name"`
+			AccountNumber       string      `json:"account_number"`
+			Mobile              interface{} `json:"mobile"`
+			Currency            string      `json:"currency"`
+			Amount              float64     `json:"amount"`
+			Charge              float64     `json:"charge"`
+			Mode                string      `json:"mode"`
+			TransferMethod      string      `json:"transfer_method"`
+			Narration           interface{} `json:"narration"`
+			ChapaTransferID     string      `json:"chapa_transfer_id"`
+			BankCode            int         `json:"bank_code"`
+			BankName            string      `json:"bank_name"`
+			CrossPartyReference interface{} `json:"cross_party_reference"`
+			IPAddress           string      `json:"ip_address"`
+			Status              string      `json:"status"`
+			TxRef               string      `json:"tx_ref"`
+			CreatedAt           string      `json:"created_at"`
+			UpdatedAt           string      `json:"updated_at"`
+		} `json:"data"`
 	}
 
 	// BankTransfer is an object used in bank transfer.
